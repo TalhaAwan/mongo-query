@@ -1,0 +1,24 @@
+{
+  "name": "mongo-query",
+  "version": "1.0.0",
+  "description": "Mongo query helper for common, repetitive queries",
+  "main": "index.js",
+  "repository": "TalhaAwan/mongo-query",
+  "homepage": "https://github.com/TalhaAwan/mongo-query#readme",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "mongoose",
+    "query",
+    "helper"
+  ],
+  "author": "Talha Awan",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^2.0.0",
+    "xo": "^0.24.0"
+  }
+}
