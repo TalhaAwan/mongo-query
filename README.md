@@ -144,7 +144,7 @@ mh.mrg(mh.exists(), mh.ne(2), mh.gteLte(1, 10))
 
 ## Related
 
-- (https://www.npmjs.com/package/mongo-date-query)[mongo-date-query] helper for common mongo date queries 
+- [mongo-date-query](https://www.npmjs.com/package/mongo-date-query)helper for common mongo date queries 
 
 ## License
 
