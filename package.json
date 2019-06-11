@@ -1,10 +1,10 @@
 {
-  "name": "mongo-query",
+  "name": "mongo-query-helper",
   "version": "1.0.0",
   "description": "Mongo query helper for common, repetitive queries",
   "main": "index.js",
-  "repository": "TalhaAwan/mongo-query",
-  "homepage": "https://github.com/TalhaAwan/mongo-query#readme",
+  "repository": "TalhaAwan/mongo-query-helper",
+  "homepage": "https://github.com/TalhaAwan/mongo-query-helper#readme",
   "scripts": {
     "test": "xo && ava"
   },
