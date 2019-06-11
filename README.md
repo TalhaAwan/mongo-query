@@ -4,21 +4,21 @@ Mongo query helper for common, repetitive queries
 ## Install
 
 ```
-$ npm install mongo-query
+$ npm install mongo-query-helper
 ```
 
 ## Usage
 ```
-const mqh = require('mongo-query');
+const mh = require('mongo-query-helper');
 
 //mongoose
-User.find({accessLevel: mqh.ne(2)}, function(err, users){
+User.find({accessLevel: mh.ne(2)}, function(err, users){
     if(!err){
         console.log(users)
     }
 });
 
-Match.find({completed: mqh.exists(), score: mqh.gtLt(32, 100)}, function(err, users){
+Match.find({completed: mh.exists(), score: mh.gtLt(32, 100)}, function(err, users){
     if(!err){
         console.log(users)
     }
@@ -30,115 +30,115 @@ Match.find({completed: mqh.exists(), score: mqh.gtLt(32, 100)}, function(err, us
 ### lt(param)
 Less than
 ```
-mqh.lt(2)
+mh.lt(2)
 // { '$lt': 2}
 ```
 
 ### lte(param)
 Less than equal to
 ```
-mqh.lte(2)
+mh.lte(2)
 // { '$lte': 2}
 ```
 
 ### gt(param)
 Greater than
 ```
-mqh.gt(2)
+mh.gt(2)
 // { '$gt': 2}
 ```
 
 ### gte(param)
 Greater than equal to
 ```
-mqh.gte(2)
+mh.gte(2)
 // { '$gte': 2}
 ```
 
 ### gtLt(param, param)
 Greater than and less than
 ```
-mqh.gtLt(2, 4)
+mh.gtLt(2, 4)
 // { '$gt': 2, '$lt': 4}
 ```
 
 ### gteLt(param, param)
 Greater than equal to and less than
 ```
-mqh.gteLt(2, 4)
+mh.gteLt(2, 4)
 // { '$gte': 2, '$lt': 4}
 ```
 
 ### gtLte(param, param)
 Greater than and less than equal to
 ```
-mqh.gtLte(2, 4)
+mh.gtLte(2, 4)
 // { '$gt': 2, '$lte': 4}
 ```
 
 ### gteLte(param, param)
 Greater than equal to and less than equal to
 ```
-mqh.gteLte(2, 4)
+mh.gteLte(2, 4)
 // { '$gte': 2, '$lte': 4}
 ```
 
 ### exists()
 ```
-mqh.exists()
+mh.exists()
 // { '$exists': true}
 ```
 
 ### notExists()
 ```
-mqh.notExists()
+mh.notExists()
 // { '$exists': false}
 ```
 
 ### eq(param)
 Equal to
 ```
-mqh.eq(7)
+mh.eq(7)
 // { '$eq': 7}
 ```
 
 ### ne(param)
 Not equal to
 ```
-mqh.ne(7)
+mh.ne(7)
 // { '$ne': 7}
 ```
 
 ### in([params] | param, param)
 ```
-mqh.in([1, 2, 3])
+mh.in([1, 2, 3])
 // { '$in': [1, 2, 3]}
 
-mqh.in(1, 2, 3)
+mh.in(1, 2, 3)
 // { '$in': [1, 2, 3]}
 ```
 
 ### nin([params] | param, param)
 Not in
 ```
-mqh.nin([1, 2, 3])
+mh.nin([1, 2, 3])
 // { '$nin': [1, 2, 3]}
 
-mqh.nin(1, 2, 3)
+mh.nin(1, 2, 3)
 // { '$nin': [1, 2, 3]}
 ```
 
 ### mod(param, param)
 [Modulo](https://docs.mongodb.com/manual/reference/operator/query/mod/#op._S_mod)
 ```
-mqh.mod(4, 0)
+mh.mod(4, 0)
 // { '$mod': [4, 0]}
 ```
 
 ### merge(param, param)
 Merges all the object parameters into one. Shorter name `mrg`
 ```
-mqh.mrg(mqh.exists(), mqh.ne(2), mqh.gteLte(1, 10))
+mh.mrg(mh.exists(), mh.ne(2), mh.gteLte(1, 10))
 // { '$exists': true, '$ne': 2, '$gte': 1, '$lte': 10}
 ```
 
