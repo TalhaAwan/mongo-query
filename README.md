@@ -18,9 +18,9 @@ User.find({accessLevel: mh.ne(2)}, function(err, users){
     }
 });
 
-Match.find({completed: mh.exists(), score: mh.gtLt(32, 100)}, function(err, users){
+Match.find({completed: mh.exists(), score: mh.gtLt(32, 100)}, function(err, matches){
     if(!err){
-        console.log(users)
+        console.log(matches)
     }
 });
 ```
