@@ -1,5 +1,5 @@
 # mongo-query-helper [![Build Status](https://travis-ci.com/TalhaAwan/mongo-query-helper.svg?branch=master)](https://travis-ci.com/TalhaAwan/mongo-query-helper)
-Mongo query helper for common, repetitive queries
+Mongo query helper for common, repetitive queries. Easier to write and saves some typing.
 
 ## Install
 
@@ -112,8 +112,7 @@ mh.ne(7)
 ### in([params] | param, param)
 ```
 mh.in([1, 2, 3])
-// { '$in': [1, 2, 3]}
-
+// OR
 mh.in(1, 2, 3)
 // { '$in': [1, 2, 3]}
 ```
@@ -122,8 +121,7 @@ mh.in(1, 2, 3)
 Not in
 ```
 mh.nin([1, 2, 3])
-// { '$nin': [1, 2, 3]}
-
+// OR
 mh.nin(1, 2, 3)
 // { '$nin': [1, 2, 3]}
 ```
