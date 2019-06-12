@@ -1,4 +1,4 @@
-# mongo-query-helper [![Build Status](https://travis-ci.com/TalhaAwan/mongo-query.svg?branch=master)](https://travis-ci.com/TalhaAwan/mongo-query)
+# mongo-query-helper [![Build Status](https://travis-ci.com/TalhaAwan/mongo-query-helper.svg?branch=master)](https://travis-ci.com/TalhaAwan/mongo-query-helper)
 Mongo query helper for common, repetitive queries
 
 ## Install
